@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Breast Cancer Classification </title>
+    </head>
+    <body>
+        <div class="login">
+            <h1>Breast Cancer Classification</h1>
+            <form action="{{url_for('predict')}}"method="post">
+                <input type="text" name="radius_mean" placeholder="Enter the radius_mean:" required="required"><br><br>
+                <input type="text" name="perimeter_mean" placeholder="Enter the perimeter_mean:" required="required"><br><br>
+                <input type="text" name="area_mean" placeholder="Enter the area_mean:" required="required"><br><br>
+                <input type="text" name="compactness_mean" placeholder="Enter the compactness_mean:" required="required"><br><br>
+                <input type="text" name="concave_points_mean" placeholder="Enter the concave points_mean:" required="required"><br><br>
+                <input type="text" name="radius_se" placeholder="Enter the radius_se:" required="required"><br><br>
+                <input type="text" name="perimeter_se" placeholder="Enter the perimeter_se:" required="required"><br><br>
+                <input type="text" name="area_se" placeholder="Enter the area_se:" required="required"><br><br>
+                <input type="text" name="compactness_se" placeholder="Enter the compactness_se:" required="required"><br><br>
+                <input type="text" name="concave_points_se" placeholder="Enter the concave points_se:" required="required"><br><br>
+                <input type="text" name="radius_worst" placeholder="Enter the radius_worst:" required="required"><br><br>
+                <input type="text" name="texture_worst" placeholder="Enter the texture_worst:" required="required"><br><br>
+                <input type="text" name="perimeter_worst" placeholder="Enter the perimeter_worst:" required="required"><br><br>
+                <input type="text" name="area_worst" placeholder="Enter the area_worst:" required="required"><br><br>
+                <input type="text" name="compactness_worst" placeholder="Enter the compactness_worst:" required="required"><br><br>
+                <input type="text" name="concave_points_worst" placeholder="Enter the concave_points_worst:" required="required"><br><br>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br><br>
+            </form>
+            <br>
+            <br>
+            <h6>Patient Result was : {{prediction}}</h6>
+        </div>
+    </body>
+    <style>
+        body
+        {
+            background-image: url('/static/css/BREASTCANCER.JPEG');
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: cover;
+            text-align: center;
+            padding-top: 100px;
+        }
+    </style>
+</html>
